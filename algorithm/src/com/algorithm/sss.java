@@ -10,5 +10,6 @@ public class sss {
 		System.out.println("6");
 		System.out.println("8男男女女");
 		System.out.println("8男哈哈哈哈哈哈啊哈哈哈");
+		System.out.println("8发发发发发发发发发");
 	}
 }
