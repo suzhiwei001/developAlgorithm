@@ -1,4 +1,4 @@
-package com.algorithm;
+﻿package com.algorithm;
 
 public class sss {
 	public static void main(String[] args) {
@@ -8,5 +8,6 @@ public class sss {
 		System.out.println("4");
 		System.out.println("5");
 		System.out.println("6");
+		System.out.println("8");
 	}
 }
