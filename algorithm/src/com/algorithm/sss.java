@@ -8,6 +8,6 @@ public class sss {
 		System.out.println("4");
 		System.out.println("5");
 		System.out.println("6");
-		System.out.println("8");
+		System.out.println("8方法方法付付");
 	}
 }
