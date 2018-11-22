@@ -7,5 +7,6 @@ public class sss {
 		System.out.println("3不不不不不不v");
 		System.out.println("4");
 		System.out.println("5");
+		System.out.println("884");
 	}
 }
