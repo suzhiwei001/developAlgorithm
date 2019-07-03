@@ -13,10 +13,11 @@ import java.util.Random;
  */
 public class Fast {
 	public static void main(String[] args) {
-		int [] array = new int [100];
-		for (int i = 0; i < 100; i++) {
-			array[i]=new Random().nextInt(100);
-		}
+		//int [] array = new int [15];
+		int [] array = {3,5,4,1,2};
+/*		for (int i = 0; i < 15; i++) {
+			array[i]=new Random().nextInt(15);
+		}*/
 		new FastTest(array,0,array.length-1);
 	}
 }
@@ -35,13 +36,11 @@ class FastTest{
 	/**
 	 * 顺序
 	 */
-	int s = 0;
 	public void sequentialOutput(int[] array) {
 		for (Integer integer : array) {
 			System.out.print(integer+" ");
 		}
 		System.out.println();
-		System.out.println(s+"次");
 	}
 	/**
 	 * 正序输出，使用快速排序
@@ -54,21 +53,18 @@ class FastTest{
 		//固定的切分方式
         int key=array[lo];
         while(lo<hi){
-        	s++;
             while(array[hi]>=key&&hi>lo){//从后半部分向前扫描
                 hi--;
-                s++;
             }
-            System.out.println();
             System.out.println(lo+"-----------"+hi);
             array[lo]=array[hi];
+            sequentialOutput(array);
             while(array[lo]<=key&&hi>lo){//从前半部分向后扫描
                 lo++;
-                s++;
             }
-            System.out.println();
             System.out.println(lo+"-----------"+hi);
             array[hi]=array[lo];
+            sequentialOutput(array);
         }
         array[hi]=key;
         return hi;
@@ -78,6 +74,8 @@ class FastTest{
             return ;
         }
         int index = positiveOutput(array,lo,hi);
+        System.out.println("每次结束");
+        sequentialOutput(array);
         sort(array,lo,index-1);
         sort(array,index+1,hi); 
     }

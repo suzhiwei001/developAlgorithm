@@ -1,9 +1,10 @@
 package com.algorithm.lambda;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Lambda {
-	public static void main(String[] args) {
+	public static <E> void main(String[] args) {
 		ArrayList<String> arrayList = new ArrayList<>();
 		arrayList.add("12345");
 		arrayList.add("34235");
@@ -12,6 +13,5 @@ public class Lambda {
 		arrayList.add("uyky");
 		//arrayList.forEach((ss) -> System.out.println(ss));
 		arrayList.forEach(System.out::println);
-		
 	}
 }

@@ -51,7 +51,7 @@ public class LinkList {
 			Node temp = null;//定义一个中间节点，
 			while(q!=null) {//如果第二个节点不为空
 				temp = q.getNext();//把第三个节点付给中间变量
-				q.setNext(p);//然后把他引用变为第一个节点
+				q.setNext(p);//然后把他（2节点）引用变为第一个节点
 				p = q;//然后把第二个节点付给第一个节点的位置
 				q = temp;//把中间变量的值赋值给第二个节点对象，也就是刚才的第一个节点
 			}
